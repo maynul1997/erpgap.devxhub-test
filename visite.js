@@ -39,5 +39,9 @@ test.only('blog visit', async t=>{
         await t.wait(500);
     }
 
-    
+    for (let i = 0; i < 20; i++) {
+        await t.scrollBy(0,-300);
+        await t.wait(500);
+    }
+
 })
