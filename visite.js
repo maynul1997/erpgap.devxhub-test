@@ -1,10 +1,10 @@
+import { Selector } from 'testcafe';
 
-import { Selector } from 'testcafe'
+fixture`TestController.scrollIntoView`
+    .page`https://erpgap.devxhub.com//`;
 
-fixture`Getting Started`
-
-.page`https://erpgap.devxhub.com/` 
-
-test('Valid signup test', async t=>{
-    await t.click("#signin2");
-})
+test('Scroll the webpage', async t => {
+    await t.scrollBy(0,300);
+    await t.wait(500);
+    
+});
